@@ -1,0 +1,365 @@
+.navv{
+  box-shadow: 1px 1px 12px rgb(230, 230, 230);
+  background-color: rgb(254, 254, 254);
+}
+.top-row{
+  bottom: solid 1px black;
+  height: 40px;
+  position: relative;
+  right: 10%;
+  width: 100%;
+}
+.top-row a{
+  float: right;
+  font-size: 15px;
+  font-family: sans-serif;
+  border: solid 1px #007bb8;
+  padding: 3px 15px;
+  margin: 10px 8px; 
+  border-radius: 20px;
+  color: white;
+  background-color: #007bb8;
+}
+
+.navbar{
+  width: 100% ;
+  padding: 0 12%;
+}
+.nav-item{
+  font-size: 20px;
+  padding: 5px 15px;
+}
+.nav-item :hover{
+  border-bottom: solid 3px #F47457;
+}
+.logo{
+  position: relative;
+  top: -15px;
+}
+ .header img{
+  position: relative;
+  top: 15px;
+  height: 450px;
+  width: 90%;
+}
+.header-content{
+  position: relative;
+  padding-left: 100px;
+  top: 80px;
+  height: 300px;
+}
+.header-content p{
+  font-size: 18px;
+  line-height: 25px;
+  font-family: sans-serif;
+}
+.header-content h2{
+  font-family: sans-serif;
+  line-height: 42px;
+  color: #F47457;
+}
+.header-content a{
+  border: solid 1px #007bb8;
+  padding: 10px 35px;
+  font-size: 18px;
+  color: white;
+  border-radius: 25px;
+  background-color: #007bb8;
+}
+.sections{
+  height: 600px;
+  width: 100%;
+  background:  rgb(244,116,87, 0.9);
+}
+.tabs {
+  position:relative;
+  top: 8%;
+  left: 15%;
+  width:70%;
+  height:500px;
+  
+}
+.tabs .tab-header {
+  background:#ffffff;
+  padding:10px;
+  display:flex;
+  border-bottom: 4px solid #F47457;
+  border-radius: 10px;
+}
+.tabs .tab-header > div {
+  position:relative;
+  width:25%;
+  text-align:center;
+  padding:10px;
+  z-index:1;
+  font-weight:600;
+  color:#888;
+  cursor:pointer;
+  transition:all 300ms ease-in-out;
+  font-size: 17px;
+}
+.tabs .tab-header > div  .active {
+  color: #F47457;
+}
+.tabs .tab-indicator {
+  position:absolute;
+  width:calc(25% - 5px);
+  height:40px;
+  background:#d9e5f9;
+  top:10px;
+  left:10px;
+  border-radius:20px;
+  transition:all 300ms ease-in-out;
+}
+.tabs .tab-body {
+  position:relative;
+  padding:20px;
+  background:#ffffff;
+  border-top:1px solid #ddd;
+  height:calc(100% - 50px);
+  overflow:hidden;
+  border-radius: 10px;
+}
+.tabs .tab-body > div {
+  position:absolute;
+  opacity:0;
+  top:-100%;
+  transform:translateY(-10px);
+  transition:opacity 300ms ease-in-out,
+            transform 300ms ease-in-out;
+}
+.tabs .tab-body > div.active {
+  transform:translateY(0px);
+  top:20px;
+  opacity:1;
+}
+.tabs .tab-body h1 {
+  color:#222;
+  margin-bottom:10px;
+}
+.tabs .tab-body p {
+  color:#555;
+  font-size:15px;
+}
+
+.findcar-form{
+  width: 700px;
+  padding: 15px 0px 5px 0;
+  position: relative;
+  left: 20%;
+  border-radius: 10px;
+  background-color: rgb(238, 238, 238);
+} 
+
+label{
+  font-size: 17px;
+  font-family: sans-serif;
+}
+.col-width{
+width: 500px;
+}
+.form-control{
+  margin-bottom: 25px;
+} 
+.btn-primary{
+  padding: 6px 50px;
+  font-size: 18px;
+  border-radius: 20px;
+  position: relative;
+  left: 35%;
+}
+.recommend-sec{
+  width: 75%;
+  padding: 20px 40px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  position: relative;
+  left: 12%;
+  top: 40px;
+}
+.recommend-sec h4{
+  text-align: center;
+  font-family:fantasy;
+  line-height: 30px;
+}
+.btn-success{
+  padding: 8px 50px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/*recommend-form css*/
+.recommend-background{
+  background-image: url(images/background-recommendation.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+ .recommend-form{
+  width: 75%;
+  padding: 30px 50px 40px 50px;
+  position: relative;
+  border-radius: 10px;
+  top: 20px;
+  left: 12%;
+  background-color: rgb(255, 255, 255);
+}
+/*.recommend-form div{
+  margin-bottom: 8px;;
+}
+
+.labal2{
+  margin-bottom: 25px;
+}  */
+
+@media (max-width: 500px) {
+  .navbar{
+    padding: 0 5%;
+    border-bottom: solid 1px #dfdddd;
+  }
+  .nav-item{
+    font-size: 17px;
+    padding: 0px 10px;
+  }
+  .header img{
+    height: 200px;
+    width: 100%;
+  }
+  .header-content{
+    position: relative;
+    padding-left: 20px;
+    top: 20px;
+    height: 300px;
+  }
+  .header-content p{
+    font-size: 15px;
+    line-height: 25px;
+    font-family: sans-serif;
+  }
+  .header-content h2{
+    font-family: sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    color: #F47457;
+  }
+  .header-content a{
+    border: solid 1px #007bb8;
+    padding: 8px 30px;
+    font-size: 15px;
+    color: white;
+    border-radius: 25px;
+    background-color: #007bb8;
+  }
+  .sections{
+    height: 700px;
+    width: 100%;
+    background:  rgb(244,116,87, 0.9);
+  }
+  .tabs {
+    position:relative;
+    top: 5%;
+    left: 0%;
+    width:100%;
+  }
+  .tabs .tab-header > div {
+    position:relative;
+    width:100%;
+    padding:5px 15px;
+    font-size: 14px;
+    color: #222;
+    margin: 0 5px;
+  }
+  .tabs .tab-indicator {
+    background:#ffffff;
+  }
+  .tabs .tab-body {
+    height:calc(100% - 5px);
+  }
+  .findcar-form{
+    width: 350px;
+    padding: 10px 0px;
+    position: relative;
+    left: 0%;
+  } 
+  .col-form-label, .form-control{
+  width: 300px;
+  }
+  .form-control{
+    margin-bottom: 20px;
+  }
+  .btn-primary{
+    position: relative;
+    left: 25%;
+  }
+  .recommend-sec{
+    width: 95%;
+    padding: 20px 10px;
+    position: relative;
+    left: 0%;
+  }
+  .recommend-form{
+    width: 90%;
+    padding: 20px 20px 10px 20px;
+    position: relative;
+    border-radius: 10px;
+  }
+  .recommend-form div{
+    margin-bottom: 5px;;
+  }
+  .labal2{
+    margin-bottom: 25px;
+  } 
+} 
+
+
+#preference1,#preference2,#preference3,#preference4,#preference5,#preference6,#preference7,#preference8,#preference9,#preference10{
+  border: solid 2px gray;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.first{
+  height: 60px;
+  padding: 15px 0;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px 0px #b6b6b6;
+  background-color: rgb(254, 254, 254);
+}
+.col-sm-12 div{
+  float: left;
+}
+.row{
+  padding: 0 20px;
+  margin: 25px 0;
+}
+input[type=checkbox] {
+  transform: scale(1.75);
+}
+input[type=number] {
+  width: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.recommend-form p{
+  font-size: 18px;
+  text-align: center;
+}
+.recommend-form h3, h6{
+  text-align: center;
+}
+.recommend-form button{
+  position: relative;
+  left: 43%;
+  width: 16%;
+  border-radius: 20px;
+}
+

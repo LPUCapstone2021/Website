@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Recommendation System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navv">
+  <div class="top-row">
+      <a href="#" class="sign-btn">Sign Up</a>
+      <a href="#" class="Log-btn ">LogIn</a>
+  </div>
+<header>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="logo">
+        <img src="/images/logo.png" alt="">
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Recommend a Car</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+</div>
+
+ <div class="container-fluid row content banner">
+      <div class="col-sm-5">
+        <div class="header-content">
+          <h2>Lorem ipsum dolor sit amet consectetur</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt quis ullam non ea officiis dolorum earum facilis nemo eius perspiciatis, culpa beatae neque atque corporis commodi iure doloremque quos reiciendis?</p><br>
+          <a href="#">Get Started</a>
+        </div>  
+      </div>
+
+      <div class="col-sm-7">
+        <div class="header">
+          <img src="/images/header.png" alt="A man with car">
+        </div>  
+      </div>
+  </div>
+<br>
+<br>
+
+<div class="container-fluid sections">
+  <div class="tabs">
+    <div class="tab-header">
+      <div class="active">Find Cars</div>
+      <div>Recommend a Car</div>
+      <div>Car Brands</div>
+    </div>
+    <div class="tab-indicator"></div>
+    <div class="tab-body ">
+      <div class="active">
+        <form class="findcar-form ">
+          <div class="form-group row justify-content-center align-items-center">
+            <div>
+            <label for="brandName" class="col-sm-4 col-form-label col-width">Car Brand Name: </label>
+            <div class="col-sm-8">
+              <select class="form-control col-width" id="sel1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option> 
+              </select>
+            </div>
+            <label for="seatingPlan" class="col-sm-4 col-form-label col-width">Seating Plan: </label>
+            <div class="col-sm-8">
+              <select class="form-control col-width" id="sel2">
+                <option>2</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option> 
+              </select>
+            </div>
+            <label for="Price" class="col-sm-4 col-form-label col-width">Price Range: </label>
+            <div class="col-sm-8">
+              <select class="form-control col-width" id="sel3">
+                <option>Select your budget</option>
+              <option>Below 10L</option>
+              <option>Below 15L</option>
+              <option>Below 20L</option>
+              <option>Below 25L</option>
+              <option>Below 30L</option>
+              <option>Below 35L</option>
+              <option>Below 40L</option>
+              <option>Below 45L</option> 
+              <option>Below 50L</option>
+              <option>Any</option> 
+              </select>
+            </div>
+            <button type="button" class="btn btn-primary center-btn">Search</button>
+            </div>
+              
+          </div>
+        </form>
+      </div>
+  
+      <div>
+        <div class="recommend-sec text-center">
+          <h4>Click on below button and give us your preference in the car, we will recommend you the cars according to your preferences</h4>
+          <a href="recommend.html"><button type="button" class="btn btn-success center-block">Get Started</button></a>
+        </div>
+      </div>
+  
+      <div>
+        <h1>About</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit dolor tempore accusamus! Porro molestias, deleniti quae, corporis saepe fuga illum nulla minus vero impedit optio a iste. Accusantium, repellendus inventore!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<script>
+
+  let tabs = document.querySelector(".tabs");
+let tabHeader = tabs.querySelector(".tab-header");
+let tabBody = tabs.querySelector(".tab-body");
+let tabIndicator = tabs.querySelector(".tab-indicator");
+let tabHeaderNodes = tabs.querySelectorAll(".tab-header > div");
+let tabBodyNodes = tabs.querySelectorAll(".tab-body > div");
+
+for(let i=0;i<tabHeaderNodes.length;i++){
+  tabHeaderNodes[i].addEventListener("click",function(){
+    tabHeader.querySelector(".active").classList.remove("active");
+    tabHeaderNodes[i].classList.add("active");
+    tabBody.querySelector(".active").classList.remove("active");
+    tabBodyNodes[i].classList.add("active");
+    tabIndicator.style.left = `calc(calc(calc(25% - 5px) * ${i}) + 10px)`;
+  });
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

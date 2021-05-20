@@ -1,0 +1,107 @@
+.top-row{
+    bottom: solid 1px black;
+    height: 40px;
+    position: relative;
+    right: 10%;
+    width: 100%;
+  }
+  .top-row a{
+    float: right;
+    font-size: 15px;
+    font-family: sans-serif;
+    border: solid 1px #007bb8;
+    padding: 3px 15px;
+    margin: 10px 8px; 
+    border-radius: 20px;
+    color: white;
+    background-color: #007bb8;
+  }
+  
+  .navbar{
+    width: 100% ;
+    padding: 0 12%;
+  }
+  .nav-item{
+    font-size: 20px;
+    padding: 5px 15px;
+  }
+  .nav-item :hover{
+    border-bottom: solid 3px #F47457;
+  }
+  .logo{
+    position: relative;
+    top: -15px;
+  }
+
+  .navv{
+      box-shadow: 1px 1px 12px rgb(230, 230, 230);
+      background-color: rgb(254, 254, 254);
+  }
+
+  section{
+    padding: 40px 0 80px 0;
+  }
+  .card{
+    height: auto;
+    width:70%;
+    box-shadow: 1px 2px 10px rgb(187, 187, 187);
+    background-color: rgb(252, 252, 252);
+    margin-top: 40px;
+    border: none;
+  }
+  .car-img{
+    height: 200px;
+    border: solid 1px rgb(201, 199, 199);
+  }
+  .card-body div{
+    float: left;
+  }
+ .card .col-sm-3{
+   border-left: solid 1px rgb(192, 192, 192);
+   padding: 20px 30px;
+   height: 200px  ;
+ }
+ .card .col-sm-3 p{
+   margin-bottom: 100px;
+ }
+ .car-view-btn {
+   background-color: #007bb8;
+   color: white;
+   padding: 6px 15px;
+   border-radius: 25px;
+   text-decoration: none;
+   font-size: 15px;
+ }
+ .car-view-btn:hover{
+   color: white;
+   background-color: #F47457;
+ }
+
+ @media (max-width: 500px){
+  section{
+    padding: 0px 0 40px 0;
+  }
+  .card{
+    width:95%;
+    margin-top: 30px;
+    border: none;
+  }
+  .card .col-sm-3{
+    border-left:none;
+    padding: 10px 20px;
+    height: auto;
+  }
+  .card .col-sm-3 p{
+    margin-bottom: 10px;
+  }
+ }
+ @media (max-width: 800px){
+  .card{
+    width:95%;
+    border: none;
+  }
+  .car-view-btn {
+    padding: 6px 10px;
+    font-size: 15px;
+  }
+ }
