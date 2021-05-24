@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="recommend-background">
-    <form action="https://capstonebackend.free.beeceptor.com" class="recommend-form"> 
-      <h3>Give us your Preferences in these Features</h3> 
+    <form action="https://capstonebackend.free.beeceptor.com" method="POST" class="recommend-form"> 
+
+       <h3>Give us your Preferences in these Features</h3> 
       <p>We will Recommend you cars based upon your Feature Preferences in the cars</p>
         <div class="form-group row">
           <div class="col-sm-12">
@@ -27,21 +28,22 @@
                 </div>
               </div>
               <div class="col-sm-3 ">
-                <input type="number" name="preference1" id="preference1" placeholder=" eg. 1" min="1" max="6" style="display: none;">
+                <input type="number" name="feature1" id="feature1" min="1" max="10" style="display: none;">
               </div>
             </div>
-
+            
+           
             <div class="col-sm-12 first">
               <div class="radio col-sm-9">
                 <div class="col-sm-10">
-                  <label for="feature2"><p> II.  Performance</p></label>
+                  <label for="feature2 "><p> II.  Performance</p></label>
                 </div>
                 <div class="col-sm-2">
-                  <input type="checkbox" name="feature2" value="Yes" ONCLICK="preferenceFeature2()"> 
+                  <input type="checkbox"  name="feature2" value="Yes" ONCLICK="preferenceFeature2()" >
                 </div>
               </div>
               <div class="col-sm-3 ">
-                <input type="number" name="preference2" id="preference2" min="1" max="6" style="display: none;">
+                <input type="number" name="feature2" id="feature2" min="1" max="10" style="display: none;">
               </div>
             </div>
 
@@ -55,7 +57,7 @@
                 </div>
               </div>
               <div class="col-sm-3 ">
-                <input type="number" name="preference3" id="preference3" min="1" max="6" style="display: none;">
+                <input type="number" name="feature3" id="feature3" min="1" max="10" style="display: none;">
               </div>
             </div>
             
@@ -69,7 +71,7 @@
                 </div>
               </div>
               <div class="col-sm-3 ">
-                <input type="number" name="preference4" id="preference4" min="1" max="6" style="display: none;">
+                <input type="number" name="feature4" id="feature4" min="1" max="10" style="display: none;">
               </div>
             </div>
 
@@ -83,7 +85,7 @@
                 </div>
               </div>
               <div class="col-sm-3 ">
-                <input type="number" name="preference5" id="preference5" min="1" max="6" style="display: none;">
+                <input type="number" name="feature5" id="feature5" min="1" max="10" style="display: none;">
               </div>
             </div>
 </div>
@@ -98,7 +100,7 @@
                 </div>
               </div>
               <div class="col-sm-3 ">
-                <input type="number" name="preference6" id="preference6" min="1" max="6" style="display: none;">
+                <input type="number" name="feature6" id="feature6" min="1" max="10" style="display: none;">
               </div>
             </div>
 
@@ -112,7 +114,7 @@
                 </div>
               </div>
               <div class="col-sm-3 ">
-                <input type="number" name="preference7" id="preference7" min="1" max="6" style="display: none;">
+                <input type="number" name="feature7" id="feature7" min="1" max="10" style="display: none;">
               </div>
             </div>
 
@@ -126,7 +128,7 @@
                 </div>
               </div>
               <div class="col-sm-3 ">
-                <input type="number" name="preference8" id="preference8" min="1" max="6" style="display: none;">
+                <input type="number" name="feature8" id="feature8" min="1" max="10" style="display: none;">
               </div>
             </div>
 
@@ -140,7 +142,7 @@
                 </div>
               </div>
               <div class="col-sm-3 ">
-                <input type="number" name="preference9" id="preference9" min="1" max="6" style="display: none;">
+                <input type="number" name="feature9" id="feature9" min="1" max="10" style="display: none;">
               </div>
             </div>
 
@@ -154,17 +156,18 @@
                 </div>
               </div>
               <div class="col-sm-3 ">
-                <input type="number" name="preference10" id="preference10" min="1" max="6" style="display: none;">
+                <input type="number" name="feature10" id="feature10" min="1" max="10" style="display: none;">
               </div>
             </div>
             </div>
             </div>
 
-            <button type="button" class="btn btn-primary">Submit</button> 
+            <input type="submit" value="Submit" id="button">
+            
   </form>
-<script>
+ <script>
 function preferenceFeature1() {
-    var x = document.getElementById('preference1');
+    var x = document.getElementById('feature1');
     if (x.style.display == 'none') {
         x.style.display = 'block';
 
@@ -172,8 +175,9 @@ function preferenceFeature1() {
         x.style.display = 'none';
     }
 }
+
 function preferenceFeature2() {
-    var x1 = document.getElementById('preference2');
+    var x1 = document.getElementById('feature2');
     if (x1.style.display == 'none') {
         x1.style.display = 'block';
     } else {
@@ -181,7 +185,7 @@ function preferenceFeature2() {
     }
 }
 function preferenceFeature3() {
-    var x2 = document.getElementById('preference3');
+    var x2 = document.getElementById('feature3');
     if (x2.style.display == 'none') {
         x2.style.display = 'block';
     } else {
@@ -189,7 +193,7 @@ function preferenceFeature3() {
     }
 }
 function preferenceFeature4() {
-    var x3 = document.getElementById('preference4');
+    var x3 = document.getElementById('feature4');
     if (x3.style.display == 'none') {
         x3.style.display = 'block';
     } else {
@@ -197,7 +201,7 @@ function preferenceFeature4() {
     }
 }
 function preferenceFeature5() {
-    var x4 = document.getElementById('preference5');
+    var x4 = document.getElementById('feature5');
     if (x4.style.display == 'none') {
         x4.style.display = 'block';
     } else {
@@ -205,7 +209,7 @@ function preferenceFeature5() {
     }
 }
 function preferenceFeature6() {
-    var x5 = document.getElementById('preference6');
+    var x5 = document.getElementById('feature6');
     if (x5.style.display == 'none') {
         x5.style.display = 'block';
     } else {
@@ -213,7 +217,7 @@ function preferenceFeature6() {
     }
 }
 function preferenceFeature7() {
-    var x6 = document.getElementById('preference7');
+    var x6 = document.getElementById('feature7');
     if (x6.style.display == 'none') {
         x6.style.display = 'block';
     } else {
@@ -221,7 +225,7 @@ function preferenceFeature7() {
     }
 }
 function preferenceFeature8() {
-    var x7 = document.getElementById('preference8');
+    var x7 = document.getElementById('feature8');
     if (x7.style.display == 'none') {
         x7.style.display = 'block';
     } else {
@@ -229,7 +233,7 @@ function preferenceFeature8() {
     }
 }
 function preferenceFeature9() {
-    var x8 = document.getElementById('preference9');
+    var x8 = document.getElementById('feature9');
     if (x8.style.display == 'none') {
         x8.style.display = 'block';
     } else {
@@ -237,14 +241,14 @@ function preferenceFeature9() {
     }
 }
 function preferenceFeature10() {
-    var x9 = document.getElementById('preference10');
+    var x9 = document.getElementById('feature10');
     if (x9.style.display == 'none') {
         x9.style.display = 'block';
     } else {
         x9.style.display = 'none';
     }
 }
-</script>
+</script> 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
