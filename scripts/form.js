@@ -15,17 +15,17 @@ $('form').on('submit', event => {
 
   fetch(event.target.action, {
     method: event.target.method,
-    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(body)
   })
     .then(response => response.json())
-    .then(result => {
-      $('form')[0].reset()
-      localStorage.setItem('recommendedCarsId', JSON.stringify(result.data))
-      window.location.replace(`${getBaseUrl()}/index.html`)
-    })
+    .then(data => console.log(data))
+    // .then(result => {
+    //   $('form')[0].reset()
+    //   localStorage.setItem('recommendedCarsId', JSON.stringify(result.data))
+    //   window.location.replace(`${getBaseUrl()}/index.html`)
+    // })
     .catch(error => console.warn(error))
 });
