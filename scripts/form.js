@@ -21,11 +21,10 @@ $('form').on('submit', event => {
     body: JSON.stringify(body)
   })
     .then(response => response.json())
-    .then(data => console.log(data))
-    // .then(result => {
-    //   $('form')[0].reset()
-    //   localStorage.setItem('recommendedCarsId', JSON.stringify(result.data))
-    //   window.location.replace(`${getBaseUrl()}/index.html`)
-    // })
+    .then(result => {
+      $('form')[0].reset()
+      localStorage.setItem('recommendedCarsId', JSON.stringify(result.data))
+      window.location.replace(`${getBaseUrl()}/index.html`)
+    })
     .catch(error => console.warn(error))
 });
