@@ -24,7 +24,7 @@ $('form').on('submit', event => {
     .then(result => {
       $('form')[0].reset()
       localStorage.setItem('recommendedCarsId', JSON.stringify(result.data))
-      window.location.replace(`${getBaseUrl()}/index.html`)
+      window.location.replace(`${getBaseUrl()}/recommendedCars.html`)
     })
     .catch(error => console.warn(error))
 });
