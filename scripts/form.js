@@ -15,6 +15,7 @@ $('form').on('submit', event => {
 
   fetch(event.target.action, {
     method: event.target.method,
+    mode: 'cors',
     headers: {
       'Content-Type': 'application/json'
     },
