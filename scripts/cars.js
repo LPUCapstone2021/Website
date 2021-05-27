@@ -23,7 +23,7 @@ let card = ({name}) => `
 if (recommendedCarsId) {
 	let section = ``
 	let params = new URLSearchParams(recommendedCarsId.map((s, i)=>[`id${i+1}`,s])).toString()
-	fetch(`http://127.0.0.1:5000/cars?${params}`)
+	fetch(`https://carsandcarsapi.herokuapp.com/cars?${params}`)
 		.then(res => res.json())
 		.then(cars => {
 			cars.forEach(car => section += card(car["Car names"]))
